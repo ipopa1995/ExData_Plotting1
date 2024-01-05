@@ -37,7 +37,7 @@ generate_png <- function(plot_func, data, png_filename) {
 # Function to plot the histogram
 plot_histogram <- function(subset_data) {
     hist(subset_data$Global_active_power, col = "red", main = "Global Active Power",
-        xlab = "Frequency", ylab = "Frequency", xlim = c(0, max(subset_data$Global_active_power, na.rm = TRUE)))
+        xlab = "Global Active Power (kilowatts)", ylab = "Frequency", xlim = c(0, max(subset_data$Global_active_power, na.rm = TRUE)))
 }
 
 
