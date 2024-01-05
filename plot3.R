@@ -58,8 +58,9 @@ weekdays_labeling <- function(subset_data) {
 # Function to plot the time series with 3 lines
 plot_time_series_3_line <- function(subset_data) {
     # Ensure the data is ordered by time if it's not already
-    xaxt <- weekdays_labeling(subset_data)[[1]]
-    xaxt_labels <- weekdays_labeling(subset_data)[[2]]
+    xaxt_info <- weekdays_labeling(subset_data)
+    xaxt <- xaxt_info[[1]]
+    xaxt_labels <- xaxt_info[[2]]
 
     # Plot the data for sub-metering 1, 2, and 3
     plot(subset_data$Sub_metering_1, type = "l", col = "black", xaxt = "n", xlab = "", ylab = "Energy sub metering", 
